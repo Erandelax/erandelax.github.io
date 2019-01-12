@@ -173,16 +173,16 @@ body li:not(:first-of-type){
   from {top:-140vh}
   to {top:140vh}
 }
-html:before, html:after{
-    content:"";
-    top:0;
-    left:0;
-    height:100vh;
-    width:100vw;
-    display:block;
-    position:fixed;
-}
 @media only screen and (min-width: 1024px) {
+    html:before, html:after{
+        content:"";
+        top:0;
+        left:0;
+        height:100vh;
+        width:100vw;
+        display:block;
+        position:fixed;
+    }
     html:before{
         background:url(/assets/bg.png) center/cover;
         animation:brightness 5s ease infinite;
