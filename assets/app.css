@@ -15,6 +15,8 @@ html {
 body{
     padding-top:1em;
     padding-bottom:3em;
+    padding-left:1em;
+    padding-right:1em;
 }
 @media only screen and (min-width: 1024px) {
     head{
@@ -180,11 +182,11 @@ html:before, html:after{
     display:block;
     position:fixed;
 }
-html:before{
-    background:url(/assets/bg.png) center/cover;
-    animation:brightness 5s ease infinite;
-}
 @media only screen and (min-width: 1024px) {
+    html:before{
+        background:url(/assets/bg.png) center/cover;
+        animation:brightness 5s ease infinite;
+    }
     html.with-effects body{
         mix-blend-mode: exclusion;
     }
