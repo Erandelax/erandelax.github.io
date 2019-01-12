@@ -43,13 +43,13 @@ body{
         font-size:.75em;
     }
     meta:before{
-        content:"META " attr(name) attr(content);
+        content:"META " attr(name) " " attr(content);
     }
     title:before{
         content:"TITLE ";
     }
     link:before{
-        content:"LINK " attr(rel) attr(type) attr(href);
+        content:"LINK " attr(rel) " " attr(type) " " attr(href);
     }
     script:before{
         content: "SCRIPT " attr(src);
