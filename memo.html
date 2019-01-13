@@ -30,7 +30,6 @@
                 fontFamily: "Share Tech Mono",
                 highlightGutterLine: false,
             })
-            editor.setUseWrapMode(true);
             editor.on('change', function() {
                 if (window.localStorage) window.localStorage.setItem("memo",editor.getValue())
             });
