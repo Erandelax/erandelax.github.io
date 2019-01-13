@@ -8,34 +8,10 @@
         <meta name="description" content="Junior Backend Developer, Freelancer">
         <meta name="keywords" content="erandelax,freelancer,php,hiring,hire,hr,recruiting,php,golang,go,js,nodejs,software">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-        <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">-->
         <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
         <link rel="stylesheet" href="assets/app.css" type="text/css" />
         <script src="https://cdn.jsdelivr.net/gh/camwiegert/baffle@latest/dist/baffle.min.js"></script>
-        <script>
-            function init(){
-                if (window.baffle) for (
-                    var i = 0, 
-                    els = document.getElementsByTagName("SPAN"),
-                    options = {speed: 50, characters: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz" },
-                    delay = 0; 
-                    i < els.length; 
-                    i++, delay += 100
-                ) baffle(els[i]).set(options).reveal(500 + delay)
-                for (
-                    var i = 0,
-                    els = document.getElementsByTagName("A");
-                    i < els.length; 
-                    i++
-                ) els[i].setAttribute("target","_blank")
-                var test = document.createElement("div")
-                test.style['mix-blend-mode'] = "overlay"
-                test.style['pointer-events'] = "none"
-                if (test.style['mix-blend-mode'] === 'overlay' && test.style['pointer-events'] === 'none'){
-                    document.documentElement.classList.add("with-effects")
-                }
-            }
-        </script>
+        <script src="assets/app.js"></script>
     </head>
     <body onload="init()">
         <h1>
