@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
         <link rel="icon" type="image/png" href="/assets/favicon.png" />
         <meta name="theme-color" content="black">
-        <title>Ace Editor</title>
+        <title>Memo</title>
         <meta name="description" content="Junior Backend Developer, Freelancer">
         <meta name="keywords" content="erandelax,freelancer,php,hiring,hire,hr,recruiting,php,golang,go,js,nodejs,software">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -21,7 +21,8 @@
                 theme: "ace/theme/gob",
                 mode: "ace/mode/markdown",
                 minLines: 1,
-                maxLines: 10000,
+                maxLines: Infinity,
+                printMargin: false,
                 showLineNumbers: false,
                 highlightActiveLine: false,
                 cursorStyle: "smooth",
@@ -29,6 +30,12 @@
                 fontFamily: "Share Tech Mono",
                 highlightGutterLine: false,
             })
+            editor.getSession().on('change', function() {
+                if (window.localStorage) window.localStorage.setItem("memo",editor.getValue())
+            });
+            if (window.localStorage && window.localStorage.getItem("memo")) {
+                editor.setValue(window.localStorage.getItem("memo"))
+            }
             editor.focus()
             editor.execCommand("gotolineend")
             if (window.location.href.indexOf("ru") !== false) editor.setOption("fontFamily","Ubuntu Mono")
