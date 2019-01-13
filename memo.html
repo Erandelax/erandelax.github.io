@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="background:#131313">
+<html style="background:#131313" id="html">
     <head style="display:none!important">
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
         <link rel="icon" type="image/png" href="/assets/favicon.png" />
@@ -30,12 +30,32 @@
                 fontFamily: "Share Tech Mono",
                 highlightGutterLine: false,
             })
-            editor.getSession().on('change', function() {
+            editor.on('change', function() {
                 if (window.localStorage) window.localStorage.setItem("memo",editor.getValue())
+            });
+            editor.on('blur', function() {
+                editor.focus()
             });
             if (window.localStorage && window.localStorage.getItem("memo")) {
                 editor.setValue(window.localStorage.getItem("memo"))
+            } else {
+                editor.setValue("# Memo\nType here. Data is stored to browser' storage between sessions.\nPress ctrl+q/e to change UI color.")
             }
+            var hue = 0;
+            if (window.localStorage && window.localStorage.getItem("hue")) hue = window.localStorage.getItem("hue")
+            editor.commands.bindKey("ctrl-q", function(e) {
+                hue -= 10;
+                if (hue < 0) hue = 350;
+                document.getElementById("html").style['filter'] = 'hue-rotate(' + hue + 'deg)';
+                if (window.localStorage) window.localStorage.setItem("hue",hue)
+            })
+            editor.commands.bindKey("ctrl-e", function(e) {
+                hue += 10;
+                if (hue > 360) hue = 10;
+                document.getElementById("html").style['filter'] = 'hue-rotate(' + hue + 'deg)';
+                if (window.localStorage) window.localStorage.setItem("hue",hue)
+            })
+            document.getElementById("html").style['filter'] = 'hue-rotate(0deg)';
             editor.focus()
             editor.execCommand("gotolineend")
             if (window.location.href.indexOf("ru") !== false) editor.setOption("fontFamily","Ubuntu Mono")
