@@ -102,9 +102,15 @@ body a:hover{
     background:#0c0;
     color:black;
 }
+body a:hover:after{
+    opacity: 1;
+}
 body ul{
     list-style-type: none;
     opacity: .7;
+}
+body ul:hover{
+    opacity: 1;
 }
 body ul li:before{
     content:"- ";
