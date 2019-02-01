@@ -37,7 +37,8 @@ body{
     head *, head{
         all:unset;
         display:block;
-        opacity:.5;
+        /*opacity:.5;*/
+        color:#007600;
     }
     head {
         font-size:.75em;
@@ -96,7 +97,11 @@ body a {
 }
 body a:after {
     content:" [" attr(href) "]";
-    opacity:.6;
+    color:#007600;
+}
+body a:hover:after {
+    content:" [" attr(href) "]";
+    color:#000;
 }
 body a:hover{
     background:#0c0;
@@ -107,7 +112,7 @@ body a:hover:after{
 }
 body ul{
     list-style-type: none;
-    opacity: .9;
+    color:#0a0;
 }
 li.p:before {
     content:" ";
@@ -147,7 +152,7 @@ h1,h2,h3,h4,h5,h6>span{
     opacity:.9999; /*MS Edge makes it invisible if it is 1.0, dunno why*/
 }
 .submerged {
-    opacity:.6;
+    color: #060;
 }
 .hidden {
     display:none;
@@ -155,7 +160,11 @@ h1,h2,h3,h4,h5,h6>span{
 .subtitle{
     display:block;
     padding-left:1em;
-    opacity: .6;
+    color: #060;
+}
+h1:hover .submerged,
+h1:hover .subtitle{
+    color:#000;
 }
 .br{
     display: block;
