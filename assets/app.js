@@ -16,7 +16,10 @@ function init(){
     var test = document.createElement("div")
     test.style['mix-blend-mode'] = "overlay"
     test.style['pointer-events'] = "none"
-    if (test.style['mix-blend-mode'] === 'overlay' && test.style['pointer-events'] === 'none'){
+    var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    if (test.style['mix-blend-mode'] === 'overlay' && test.style['pointer-events'] === 'none' && (isChrome || isFirefox || isOpera)){
         document.documentElement.classList.add("with-effects")
     }
 }
