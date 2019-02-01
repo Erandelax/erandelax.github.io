@@ -75,7 +75,9 @@ p,h1,h2,h3,h4,h5,h6{
     padding:0;
 }
 h1,h2,h3,h4,h5,h6{
-    margin-top:1em;
+    position:relative;
+    margin-top:1.5em;
+    margin-bottom:.1em;
     text-transform: uppercase;
     width:auto;
 }
@@ -137,7 +139,7 @@ body ul li.title:before{
 }
 body p.desc, body ul li.desc, body ul li .desc{
     margin-left:1em;
-    opacity: .6;
+    color: #008800;
 }
 body ul > span{
     margin-left:1em;
@@ -183,6 +185,9 @@ h1:hover .subtitle{
 }
 .expander:checked + label ~ * {
     display:block;
+}
+.hidden{
+    display:none;
 }
 #portfolio + ul li img{
     display:none;
