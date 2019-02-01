@@ -221,6 +221,12 @@ h1,h2,h3,h4,h5,h6>span{
   from {top:-140vh}
   to {top:140vh}
 }
+
+html:not(.with-effects):after,
+html:not(.with-effects):before{
+    display:none!important;
+}
+
 @media only screen and (min-width: 1024px) {
     html:before, html:after{
         content:"";
