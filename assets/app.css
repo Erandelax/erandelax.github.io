@@ -107,11 +107,20 @@ body a:hover:after{
 }
 body ul{
     list-style-type: none;
-    opacity: .7;
+    opacity: .9;
 }
-body ul:hover{
+li.p:before {
+    content:" ";
+}
+.noli:before{
+    content: "> ";
+}
+body ul li {
+    position:relative;
+}
+/*body ul:hover{
     opacity: 1;
-}
+}*/
 body ul li:before{
     content:"- ";
 }
@@ -146,6 +155,36 @@ body li:not(:first-of-type){
     opacity: .6;
 }
 .br{
+    display: block;
+}
+.expander{
+    display:none;
+}
+.expander + label:before{
+    content:"[Click to show the rest of the list]";
+}
+.expander + label ~ * {
+    display:none;
+}
+.expander:checked + label:before {
+    content:"[Click to hide the rest of the list]";
+}
+.expander:checked + label ~ * {
+    display:block;
+}
+#portfolio + ul li img{
+    display:none;
+    opacity: 0;
+    animation:fade-in .2s .5s forwards;
+    pointer-events:none;
+    width:80%;
+    border: 1px solid green;
+    z-index: 10000000;
+    right:0;
+    position:absolute;
+    bottom:110%;
+}
+#portfolio + ul li:hover img{
     display: block;
 }
 @keyframes fade-in {
@@ -198,6 +237,7 @@ body li:not(:first-of-type){
     }
     html.with-effects:after{
         background:url(/assets/noise.gif) repeat;
+        background:url(/assets/noise.webp) repeat;
         pointer-events:none;
         mix-blend-mode:overlay;
         opacity: .23;

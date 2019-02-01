@@ -5,7 +5,7 @@ function init(){
         options = {speed: 50, characters: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz" },
         delay = 0; 
         i < els.length; 
-        i++, delay += 100
+        i++, delay += 40
     ) baffle(els[i]).set(options).reveal(500 + delay)
     for (
         var i = 0,

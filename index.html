@@ -14,7 +14,7 @@
         <script src="assets/app.js"></script>
     </head>
     <body onload="init()">
-        <h1>
+        <h1 id="me">
             <span>Alexander "Erandelax" Paliy</span> 
             <span class="submerged">(Oleksandr Palii)</span>
             <span class="subtitle">Freelancer / Junior Backend Developer</span>
@@ -22,19 +22,19 @@
         
         <img src="https://www.gravatar.com/avatar/45143ff0b6a22225510b786f471b4eec?s=256" class="avatar">
         
-        <h2><span>About</span></h2>
+        <h2 id="about"><span>About</span></h2>
         <p class="desc">
             <span class="br">Programmer, gamer, writer.</span>
             <span class="br">Enneagram type five personality, escapist & workaholic. Love music & good sci-fi stories. Single. Always looking for a job.</span>
         </p>
         
-        <h2><span>Hiring</span></h2>
+        <h2 id="hiring"><span>Hiring</span></h2>
         <p class="desc">
             <span class="br">I'm currently open for both one-time and remote work offers.</span> 
             <span class="br">Full time jobs - within Odessa (Ukraine) city only.</span>
         </p>
         
-        <h2><span>Skills</span></h2>
+        <h2 id="skills"><span>Skills</span></h2>
         <ul>
             <li class="title"><span>Programming languages</span></li>
             <li>
@@ -51,7 +51,7 @@
             <li><span>Russian (Native)</span></li>
         </ul>
         
-        <h2><span>Contacts</span></h2>
+        <h2 id="contacts"><span>Contacts</span></h2>
         <ul>
             <li class="title"><span>Without prior agreement (05AM/19PM GMT):</span></li>
             <li class="mobile"><a href="erandelax.vcf"><span>VCF contact card</span></a></li>
@@ -67,7 +67,7 @@
             <li><a href="//github.com/Erandelax"><span>Github</span></a></li>
             <li><a href="//whispering.space"><span>Personal website</span></a></li>
         </ul>
-        <h2><span>CAREER</span></h2>
+        <h2 id="career"><span>CAREER</span></h2>
         <ul>
             <li>
                 <span>Now: Freelancing</span>
@@ -78,7 +78,66 @@
                 <span class="br desc">Bug fixing, backend updating/migration, site templates adaptation, creation of landings, blogs, web shops and web scrappers on CMS Wordpress, Opencart, Prestashop, Joomla, Drupal and native/framework-based PHP (Yii2 or Laravel).</span>
             </li>
         </ul>
-        <h2><span>Education</span></h2>
+        <h2 id="portfolio"><span>Portfolio</span></h2>
+        <p class="desc">
+            
+        </p>
+        <ul>
+            <li class="title"><span>Freelancing:</span></li>
+            <li>
+                <a href="//oprivet.com.ua"><span>OpenCart CMS, pagespeed & SEO fixes</span></a>
+                <span class="br desc">Managed to add automatic JPG|PNG|GIF conversion to WEBP with no access to the web server (Google WEBP converter + PHP + 301s on images).</span>
+            </li>
+            <li>
+                <a href="//github.com/Erandelax/yii2-test-job-09-18"><span>Yii2, booking service</span></a>
+                <span class="br desc">
+                    Started to build this thing as a testing task when was applying for a job (got recommended by my previous employer), 
+                    on a half way refused cause did not like the new employer and suddenly found out it was not a testing task at all :/
+                </span>
+            </li>
+            <li class="title">
+                <span>Worldshop-web projects:</span>
+                <span class="br desc">Came there as intern, quit as junior. Most time played with various CMS, made a notification bot for Bitrix24 (webhooks), fixed few thousands bugs and was SEO dept personal code fixer for a while... Started one large Yii2 project, but have no idea of what happened to it after my quit :)</span>
+            </li>
+            <li><a href="//счастливый-питомец.рф"><span>Bitrix CMS, shop: template creation, bugfixes, features</span></a></li>
+            <li>
+                <a href="//domknigi-online.ru"><span>OpenCart, IO-plugin, bugfixes</span></a>
+                <span class="br desc">Import/export script for syncing OpenCart CMS product database with external XML files (including book covers sync & partial updates of existing entries).</span>
+            </li>
+            <li>
+                <a href="//ic-studio.ru"><span>Wordpress CMS, site</span></a>
+                <span class="br desc">Transformed given HTML template to Twig, built Wordpress website with that Twig template, created custom page builder for it (mix of ACF Pro at backend and Twig-composed partial templates at front).</span>
+            </li>
+            <li>
+                <a href="//birja.com"><span>Custom frightening thingy, rehabilitation</span></a>
+                <span class="br desc">Restored from a completely not working state. Fixed bugs more than seen in a previous life.</span>
+            </li>
+            <li class="noli">
+                <input class="expander" type="checkbox" id="portfolio-expander"/><label for="portfolio-expander"></label>
+                <ul>
+                <li><a href="//web.archive.org/web/20181128131033/http://nivagroup.us/"><span>Wordpress, site</span></a></li>
+                <li><a href="http://spazioanima.com"><span>Wordpress CMS, bugfixes</span></a></li>
+                <li><a href="http://zuma.org.ua"><span>OpenCart CMS, shop</span></a></li>
+                <li><a href="http://top3-seo.ru"><span>Wordpress CMS, landing</span></a></li>
+                <li><a href="http://www.22c.com.ua"><span>Wordpress CMS, landing</span></a></li>
+                <li><a href="http://mbu3.com.ua"><span>Wordpress CMS, landing (still filled with lorem ipsum 0_0)</span></a></li>
+                <li><a href="https://n1outlet.com"><span>Bitrix CMS, bugfixes</span></a></li>
+                <li><a href="https://n-d.com.ua"><span>Wordpress CMS, bugfixes</span></a></li>
+                <li><a href="http://laser-battle.ru"><span>Wordpress CMS, bugfixes</span></a></li>
+                <li><a href="http://osporte.info"><span>Wordpress CMS, bugfixes + SEO fixes</span></a></li>
+                <li><a href="http://osob.store"><span>Wordpress CMS, bugfixes + features</span></a></li>
+                <li><a href="http://elenis.com.ua"><span>Joomla CMS, bugfixes + features</span></a></li>
+                <li><a href="http://profnails.in.ua"><span>Prestashop CMS, bugfixes + admin module features</span></a></li>
+                <li><a href="https://cehstore.ru"><span>Bitrix CMS, bugfixes + SEO fixes</span></a></li>
+                <li><a href="http://flyfantasy.com.ua"><span>Custom thingy, Bugfixes + SEO fixes</span></a></li>
+                <li><a href="https://artlasers.com"><span>Wordpress CMS, bugfixes</span></a></li>
+                <li><a href="http://an-garant.pro"><span>Wordpress CMS, bugfixes</span></a></li>
+                <li><a href="http://rocosclinic.ru"><span>Wordpress CMS, bugfixes</span></a></li>
+                <li class="p"><span class="desc">...and lots more (either moved to another domain or just gone MIA)</span></li>
+                </ul>
+            </li>
+        </ul>
+        <h2 id="education"><span>Education</span></h2>
         <ul>
             <li>
                 <span>Now: Self-education</span>
