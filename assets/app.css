@@ -143,6 +143,9 @@ body li:not(:first-of-type){
 .i {
     font-style: italic;
 }
+h1,h2,h3,h4,h5,h6>span{
+    opacity:.9999; /*MS Edge makes it invisible if it is 1.0, dunno why*/
+}
 .submerged {
     opacity:.6;
 }
