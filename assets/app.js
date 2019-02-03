@@ -1,12 +1,36 @@
 function init(){
-    if (window.baffle) for (
+    if (window.baffle) {
+        function textNodesUnder(node){
+            var all = [];
+            for (node=node.firstChild;node;node=node.nextSibling){
+                if (node.nodeType==3) all.push(node);
+                else all = all.concat(textNodesUnder(node));
+            }
+            return all;
+        }
+        for (
+            var i = 0, 
+            els = textNodesUnder(document.body),
+            options = {speed: 50, characters: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz" },
+            delay = 0; 
+            i < els.length; 
+            i++, delay += 40
+        ) {
+            if (els[i].nodeValue.trim()) {
+                baffle(els[i]).set(options).reveal(50 + delay)
+            }
+        }
+    }
+    
+    /*if (window.baffle) for (
         var i = 0, 
         els = document.getElementsByTagName("SPAN"),
         options = {speed: 50, characters: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz" },
         delay = 0; 
         i < els.length; 
         i++, delay += 40
-    ) baffle(els[i]).set(options).reveal(500 + delay)
+    ) baffle(els[i]).set(options).reveal(500 + delay)*/
+    
     for (
         var i = 0,
         els = document.getElementsByTagName("A");
