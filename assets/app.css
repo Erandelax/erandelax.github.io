@@ -175,13 +175,13 @@ h1:hover .subtitle{
     display:none;
 }
 .expander + label:before{
-    content:"[Click to show the rest of the list]";
+    content:"[Click to show more]";
 }
 .expander + label ~ * {
     display:none;
 }
 .expander:checked + label:before {
-    content:"[Click to hide the rest of the list]";
+    content:"[Click to show less]";
 }
 .expander:checked + label ~ * {
     display:block;
