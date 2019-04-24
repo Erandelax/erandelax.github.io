@@ -209,7 +209,7 @@ h1:hover .subtitle{
   to {opacity:1}
 }
 @media only print{
-    *{color:black!important}   
+    *{color:black!important;font-family:sans-serif}   
     *:before{display:none}
     ul{padding-left:1em}
 }
@@ -283,7 +283,7 @@ html:not(.with-effects):before{
         background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,255,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00ff00',GradientType=0 ); /* IE6-9 */
     }
-    @keyframes glitch {
+    /*@keyframes glitch {
         0% {filter:none}
         3% {filter:drop-shadow(2px 0px #0d0)}
         5% {filter:drop-shadow(-2px 0px #0d0)}
@@ -297,5 +297,5 @@ html:not(.with-effects):before{
     html.with-effects h5,
     html.with-effects h6 {
         animation:glitch 10s infinite;
-    }
+    }*/
 }
