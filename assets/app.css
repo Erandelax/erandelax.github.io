@@ -13,7 +13,7 @@ html {
     display:none;
 }
 body{
-    padding-top:1em;
+padding-top:1em;
     padding-bottom:3em;
     padding-left:1em;
     padding-right:1em;
@@ -151,7 +151,7 @@ body li:not(:first-of-type){
     font-style: italic;
 }
 h1,h2,h3,h4,h5,h6>span{
-    opacity:.9999; /*MS Edge makes it invisible if it is 1.0, dunno why*/
+    opacity:0.9999; /*MS Edge makes it invisible if it is 1.0, dunno why*/
 }
 .submerged {
     color: #060;
