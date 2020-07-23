@@ -45,6 +45,10 @@ function init(){
     var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
     if (test.style['mix-blend-mode'] === 'overlay' && test.style['pointer-events'] === 'none' && (isChrome || isFirefox || isOpera)){
         document.documentElement.classList.add("with-effects")
-        document.documentElement.style.color = "#0f0"
     }
+    // linux gets stuck with black color
+    setTimeout(function(){
+        document.documentElement.style.color = "#000"
+        document.documentElement.style.color = "#0f0"
+    },50)
 }
